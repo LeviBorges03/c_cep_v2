@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultador de CEPs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <h1> Consultador de CEPs</h1>
+        <p class="subtitulo"> Consulte endereços de todo o Brasil usando a API gratuita do ViaCEP!</p>
+
+        
+       <!-- Formulário de Busca-->
+        <form id="formBusca" class="busca-form" onsubmit="event.preventDefault();">
+             
+            <div class="campo">
+                  <label for="uf">Estado (Uf):</label>
+                  <select id="uf" required>
+                     <option value="">Selecione o estado...</option>
+                     <option value="AC">AC</option>
+                    <option value="AL">AL</option>
+                    <option value="AP">AP</option>
+                    <option value="AM">AM</option>
+                    <option value="BA">BA</option>
+                    <option value="CE">CE</option>
+                    <option value="DF">DF</option>
+                    <option value="ES">ES</option>
+                    <option value="GO">GO</option>
+                    <option value="MA">MA</option>
+                    <option value="MT">MT</option>
+                    <option value="MS">MS</option>
+                    <option value="MG">MG</option>
+                    <option value="PA">PA</option>
+                    <option value="PB">PB</option>
+                    <option value="PR">PR</option>
+                    <option value="PE">PE</option>
+                    <option value="Pl">PI</option>
+                    <option value="RJ">RJ</option>
+                    <option value="RN">RN</option>
+                    <option value="RS">RS</option>
+                    <option value="RO">RO</option>
+                    <option value="RR">RR</option>
+                    <option value="SC">SC</option>
+                    <option value="SP">SP</option>
+                    <option value="SE">SE</option>
+                    <option value="TO">TO</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" placeholder="Ex: Campo Verde, Cuiabá..."required minlength="3">
+            </div>
+            <div class="campo">
+                <label for="rua">Rua/Logradouro</label>
+                <input type="text" id="rua" placeholder="Ex: Avenida Brasil, Rua Rio Branco..."required minlength="3">
+
+            </div>
+
+            <button type="button" id="btnBuscar">Buscar</button>
+
+
+        </form>
+
+
+        <div id="mensagem" class="mensagem oculto">
+
+        </div>
+
+        <!-- Resultado da Consulta-->
+        <div id="resultado" class="resultado oculto">
+            <h3>Resultados Encontrados</h3>
+            <div id="listaResultados" class="lista-resultado"></div>
+        </div>
+
+        <footer>
+            Documentação Oficial: <a href="http://ViaCEP.com.br/" target="_blank" rel="noopener noreferrer"></a>
+        </footer>
+    </main> 
+    
+
+    <script src="script.js"></script>
+  
+</body>
+</html>

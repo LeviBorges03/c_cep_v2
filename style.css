@@ -1,0 +1,165 @@
+
+/* Reset básico de margens e fontes */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #bbcef1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+
+}
+
+/* Cartão central */
+.container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 550px;
+    width: 100%;
+}
+
+
+
+.subtitulo {
+    color: #575757;
+    margin-bottom: 20px;
+}
+
+/* Formulário de Busca */
+.busca-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;              
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: left;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    background-color: #fff;
+}
+
+input:focus, select:focus {
+    border-color: #3498db;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #98cfdb;
+    color: rgb(14, 20, 24);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: #121618;
+}
+
+/* Mensagens e Erros */
+.mensagem {
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    margin: 10px 0px;
+}
+
+.erro {
+    background-color: #fde8e8;
+    color: #e74c3c;
+    border: 1px solid #f5c6cb;
+}
+
+.info {
+    background-color: #e8f4fd;
+    color: #3498db;
+    border: 1px solid #bee5eb;
+}
+
+/* Resultado */
+.resultado h3 {
+    color: #5683af;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.resultado {
+    padding: 15px;
+    border-radius: 10px;
+    border: 2px solid #80bed6;
+    margin: 10px 0px;
+}
+
+.lista-resultados {
+    max-height: 400px; 
+    overflow-y: auto; 
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* cartão de cada endereço */
+.item-endereco {
+    background-color: #f8f9fa;
+    border: 2px solid #808181;
+    border-radius: 6px;
+    padding: 12px;
+    text-align: left;
+}
+
+.item-endereco p {
+    margin-bottom: 6px;
+    font-size: 0.92rem;
+    color: #333;
+}
+
+.item-endereco p:last-child {
+    margin-bottom: 0;
+}
+
+.item-endereco .destaque-cep {
+    color: #20933f;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+/* Classe utilitária para esconder elementos */
+.oculto {
+    display: none;
+}
+
+footer {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+        text-decoration: underline;
+}
